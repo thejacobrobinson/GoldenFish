@@ -34,7 +34,7 @@ class Object(pygame.sprite.Sprite):
         self.change_y = 0
 
     def update(self):
-        self.rect.x -= 5
+        self.rect.x -= 8
         self.mask = pygame.mask.from_surface(self.image)
         #Get rid of object if it goes far off screen left
         if self.rect.x < -500:
@@ -99,11 +99,11 @@ class Game(object):
         self.background_x = 0
 
         #Create 10 sharks in random locations on and beyond screen
-        for i in range(10):
+        for i in range(30):
             shark = Object("pixilShark2.png")
 
             #set renadom location for sharks
-            shark.rect.x = random.randrange(400, 5000)
+            shark.rect.x = random.randrange(400, 10000)
             shark.rect.y = random.randrange(-200, 300)
             
 
